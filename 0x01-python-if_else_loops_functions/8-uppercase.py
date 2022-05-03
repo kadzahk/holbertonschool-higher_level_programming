@@ -5,3 +5,4 @@ def uppercase(str):
         if asci >= 97 and asci <= 122:
             asci -= 32
         print('{:c}'.format(asci), end="")
+    print()
