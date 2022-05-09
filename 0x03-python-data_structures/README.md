@@ -35,4 +35,5 @@ General
 10. Write a function that finds all multiples of 2 in a list.
 11. Write a function that deletes the item at a specific position in a list.
 12. Complete the source code in order to switch value of a and b
+13. C things >:(
 14. Create a C function that prints some basic info about Python lists. CPython is the reference implementation of the Python programming language. Written in C, CPython is the default and most widely used implementation of the language. Since we now know a bit of C, we can look at what is happening under the hood of Python. Let’s have fun with Python and C, and let’s look at what makes Python so easy to use.
