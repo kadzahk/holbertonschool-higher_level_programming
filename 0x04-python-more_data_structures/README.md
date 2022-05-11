@@ -33,3 +33,7 @@ General
 9. Write a function that returns a new dictionary with all values multiplied by 2
 10. Write a function that returns a key with the biggest integer value.
 11. Write a function that returns a list with all values multiplied by a number without using any loops.
+12. Create a <code>function def roman_to_int(roman_string):</code> that converts a Roman numeral to an integer.
+13. Write a function that returns the weighted average of all integers tuple (<score>, <weight>)
+14. Write a function that computes the square value of all integers of a matrix using map
+15. Write a function that deletes keys with a specific value in a dictionary
