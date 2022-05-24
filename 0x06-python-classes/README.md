@@ -30,9 +30,9 @@
 
 ### Description of files:
 0. Write an empty class Square that defines a square:
-1. <p>Write a class <code>Square</code> that defines a square by: (based on <code>0-square.py</code>)</p>
-2.<p>Write a class <code>Square</code> that defines a square by: (based on <code>1-square.py</code>)</p>
-3. <p>Write a class <code>Square</code> that defines a square by: (based on <code>2-square.py</code>)</p>
-4. <p>Write a class <code>Square</code> that defines a square by: (based on <code>3-square.py</code>)</p>
-5. <p>Write a class <code>Square</code> that defines a square by: (based on <code>4-square.py</code>)</p>
-6. <p>Write a class <code>Square</code> that defines a square by: (based on <code>5-square.py</code>)</p>
+1. Write a class <code>Square</code> that defines a square by: (based on <code>0-square.py</code>)
+2.Write a class <code>Square</code> that defines a square by: (based on <code>1-square.py</code>)
+3. Write a class <code>Square</code> that defines a square by: (based on <code>2-square.py</code>)
+4. Write a class <code>Square</code> that defines a square by: (based on <code>3-square.py</code>)
+5. Write a class <code>Square</code> that defines a square by: (based on <code>4-square.py</code>)
+6. Write a class <code>Square</code> that defines a square by: (based on <code>5-square.py</code>)
