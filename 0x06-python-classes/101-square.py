@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+""" Coordinates of a square """
 
 
 class Square:
+    """define variables and methods"""
 
     def __init__(self, size=0, position=(0, 0)):
+        """initialize attributes"""
         self.size = size
         self.position = position
 
@@ -33,9 +36,11 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
+        """define area method, evaluate square area"""
         return self.__size ** 2
 
     def my_print(self):
+        """define my_print method, printing of a square"""
         if self.__size is 0:
             print('')
         else:
@@ -44,26 +49,28 @@ class Square:
                     print('')
             for j in range(self.__size):
                 if self.__position[0] > 0:
-                    for l in range(self.__position[0]):
+                    for h in range(self.__position[0]):
                         print(' ', end='')
                 for i in range(self.__size):
                     print('#', end='')
                 print('')
 
     def __str__(self):
-        pattern = ''
+        """define special __str__ method for printing a square
+        when print(self) is called"""
+        pri = ''
         if self.__size is 0:
-            return pattern
+            return pri
         else:
             if self.__position[1] > 0:
                 for k in range(self.__position[1]):
-                    pattern += '\n'
+                    pri += '\n'
             for j in range(self.__size):
                 if self.__position[0] > 0:
-                    for l in range(self.__position[0]):
-                        pattern += ' '
+                    for h in range(self.__position[0]):
+                        pri += ' '
                 for i in range(self.__size):
-                        pattern += '#'
+                    pri += '#'
                 if j is not self.__size - 1:
-                    pattern += '\n'
-            return pattern
+                    pri += '\n'
+            return pri
