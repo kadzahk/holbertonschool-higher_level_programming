@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+""" Singly linked list """
 
 
 class Node:
+    """define variables and methods"""
 
     def __init__(self, data, next_node=None):
+        """initialize attibute"""
         self.data = data
         self.next_node = next_node
 
@@ -29,8 +32,10 @@ class Node:
 
 
 class SinglyLinkedList:
+    """define variables and methods """
 
     def __init__(self):
+        """initialize attibute"""
         self.__head = None
 
     def sorted_insert(self, value):
@@ -52,6 +57,7 @@ class SinglyLinkedList:
         return
 
     def __str__(self):
+        """define special __str__ method for printing the list values when print(self) is called """
         list_values = ''
         temp = self.__head
         while temp is not None:
