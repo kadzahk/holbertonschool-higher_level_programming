@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+"""A class Square that defines a square"""
 
 
 class Square:
+    """init allow square class to be used"""
 
     def __init__(self, size=0):
-
+        """asign private instance attribute size"""
         self.size = size
 
     @property
@@ -23,6 +25,7 @@ class Square:
         return (self.size * self.size)
 
     def my_print(self):
+        """ this function prints in stdout the square with the character #"""
         if self.__size == 0:
             print()
             return
