@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module contains an Square class """
 
+
 class Square:
     """ This a square class being crated """
     def __init__(self, size):
