@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Function that prints name """
+""" Function that prints name  """
 
 
 def say_my_name(first_name, last_name=""):
