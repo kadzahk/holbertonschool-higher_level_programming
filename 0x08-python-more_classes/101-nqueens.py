@@ -1,18 +1,33 @@
 #!/usr/bin/python3
-import sys
-''' column first element, row second element '''
+global queens
+queens = []
+
+def printQ():
+    for i in queens:
+        for row in range(8):
+            if row == i:
+                print(" Q",end="")
+            else:
+                print(" .",end="")
+        print(" ")
+
+def solve(x):
+    step = len(queens) 
+    for indices in range(step):
+        if (x == queens[indices]):
+            return False
+    for i in range(step,0,-1):    
+        if (x == queens[0-i]-i) or (x == queens[0-i]+i):
+            return False       
+    else:
+        return True
 
 
-def reject(board):
-    for col_A in board:
-        for col_B in board:
-            if not col_A is col_B:
-                if col_A[0] == col_B[0]:
-                    return True
-                if col_A[1] == col_B[1]:
-                    return True
-                if col_A[1] - col_A[0] == col_B[1] - col_B[0]:
-                    return True
-                if col_A[0] + col_A[1] == col_B[0] + col_B[1]:
-                    return True
-    return False
+def complete():
+    for i in range(8):
+        if solve(i) == True:
+            queens += [i]
+        elif solve(i) == False:
+            queens = queens - [i]
+        else:
+            return
