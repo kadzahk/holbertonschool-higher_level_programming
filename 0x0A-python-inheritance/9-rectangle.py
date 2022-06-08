@@ -5,7 +5,6 @@
 class BaseGeometry:
     """ class BaseGeometry"""
 
-
     def area(self):
         """raises an Exception"""
         raise Exception('area() is not implemented')
@@ -16,6 +15,7 @@ class BaseGeometry:
             raise TypeError('{} must be an integer'.format(name))
         if value <= 0:
             raise ValueError('{} must be greater than 0'.format(name))
+
 
 class Rectangle(BaseGeometry):
     """class Rectangle from BaseGeometry"""
