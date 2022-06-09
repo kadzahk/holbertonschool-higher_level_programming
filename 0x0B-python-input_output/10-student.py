@@ -14,7 +14,7 @@ class Student:
         """Method that retrieves a dictionary representation
         of a Student instancet"""
         if attrs is None:
-                return self.__dict__
+            return self.__dict__
         dict = {}
         for x in attrs:
             if x in self.__dict__:
