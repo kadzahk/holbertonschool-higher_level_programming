@@ -2,7 +2,8 @@
 """ module of number_of_lines"""
 
 
-def number_of_lines(filename=""):
-    """returns the number of lines of a text file"""
-    with open(filename, 'r') as r:
-        return len(r.readlines())
+def write_file(filename="", text=""):
+    """writes a string to a text file (UTF8) 
+    and returns the number of characters written """
+    with open(filename, 'w', encoding='utf-8') as file:
+        return file.write(text)
