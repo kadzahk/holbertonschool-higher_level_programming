@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" module of read_file"""
+""" module of number_of_lines"""
 
 
 def number_of_lines(filename=""):
