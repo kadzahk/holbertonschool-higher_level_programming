@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define Rectangle Class"""
 
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -13,44 +14,31 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """module Square size getter"""
+        """getter for size, retrieves size value"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """module Square size setter """
+        """setter for size, validates the size value assignement"""
         self.width = value
         self.height = value
 
     def __str__(self):
         """string represation of square"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                         self.x,
-                                                         self.y,
-                                                         self.width)
+        return '[Square] ({}) {}/{} - {}'.format(self.id,
+                                                 self.x, self.y,
+                                                 self.size)
 
     def update(self, *args, **kwargs):
         """update the data of the square with a kwargs"""
-        if len(args):
+        key_list = ["id", "size", "x", "y"]
+        if args is not None and len(args) > 0 and len(args) <= 5:
             for i, arg in enumerate(args):
-                if i == 0:
-                    self.id = arg
-                elif i == 1:
-                    self.size = arg
-                elif i == 2:
-                    self.x = arg
-                elif i == 3:
-                    self.y = arg
-        else:
-            for key, value in kwargs.items():
-                if hasattr(self, key) is True:
-                    setattr(self, key, value)
+                setattr(self, key_list[i], arg)
+        if kwargs is not None and len(kwargs) > 0 and len(kwargs) <= 5:
+            for name, value in kwargs.items():
+                setattr(self, name, value)
 
     def to_dictionary(self):
         """retrun dictonary a dictionary of id, size, x and y"""
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y
-        }
+        return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
