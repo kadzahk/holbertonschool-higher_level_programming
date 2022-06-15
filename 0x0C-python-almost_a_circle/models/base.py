@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ module for the class Base """
 import json
+import csv
 
 
 class Base:
@@ -19,32 +20,19 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """method to save the list of objects in a file.json """
-        list_dicts = []
-        if list_objs is not None:
-            for obj in list_objs:
-                tmp_dict = cls.to_dictionary(obj)
-                list_dicts.append(tmp_dict)
-            json_L_of_D = cls.to_json_string(list_dicts)
-        else:
-            json_L_of_D = "[]"
-
-        filename = cls.__name__ + ".json"
-
-        with open(filename, "w") as file:
-            num_char = file.write(json_L_of_D)
+        with open("{}.json".format(cls.__name__), 'w') as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                f.write(cls.to_json_string([obj.to_dictionary()
+                                            for obj in list_objs]))
 
     @staticmethod
     def to_json_string(list_dictionaries):
         """ method to make the dictionaries in a JSON string representation """
-        ret_list = []
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-
-        if type(list_dictionaries) != list:
-            ret_list.append(list_dictionaries)
-        else:
-            ret_list = list_dictionaries
-        return json.dumps(ret_list)
+        return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
