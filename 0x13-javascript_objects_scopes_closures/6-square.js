@@ -1,23 +1,14 @@
 #!/usr/bin/node
-const square = require('./5-square');
 
-class Square extends square {
-  constructor (size) {
-    super(size, size);
-  }
+const Square5 = require('./5-square.js');
 
-  charPrint (c) {
-    let myStr = '';
-    for (let i = 0; i < this.width; i++) {
-      if (c === undefined) {
-        myStr += 'X';
-      } else {
-        myStr += c;
-      }
-    }
-    for (let j = 0; j < this.height; j++) {
-      console.log(myStr);
-    }
+class Square extends Square5 {
+  charPrint (c = 'X') {
+    const character = c;
+    const { width, height } = this;
+    const shape = `${character.repeat(width)}\n`.repeat(height).slice(0, -1);
+    console.log(shape);
   }
 }
+
 module.exports = Square;
