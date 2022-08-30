@@ -1,5 +1,3 @@
-es (24 sloc)  855 Bytes
-
 #!/usr/bin/python3
 """
 Write a Python file similar to model_state.py
